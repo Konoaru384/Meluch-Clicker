@@ -7,4 +7,4 @@ objectif sur le court terme :
 - avoir 40 photos de Jean-Luc ❌
 - Pouvoir avoir des cartes plus rares que d'autres ❌
 - Développer le système d'argent (et rendre les clics payants)❌
-- améliorer le graphisme❌
+- améliorer les graphismes❌
