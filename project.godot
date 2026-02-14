@@ -10,8 +10,8 @@ config_version=5
 
 [application]
 
-config/name="Meluch-Clicker"
-run/main_scene="res://loading.tscn"
+config/name="meluch clickers"
+run/main_scene="res://node_2d.tscn"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 

@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://c6twgulg80c1k"]
+
+[ext_resource type="Texture2D" uid="uid://dum24ov1dhq0g" path="res://texture/melenchon/Melenchon1.png" id="1_0e48y"]
+[ext_resource type="Script" uid="uid://bajgackivw4wk" path="res://script/label.gd" id="3_0hol4"]
+
+[sub_resource type="GDScript" id="GDScript_wtcfe"]
+script/source = "extends TextureButton
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+#JORDAN ON PEUT CHANGEE LA TEXTURE DES BOUTON DONC AU LIEUX DE METTRE 2000000 BOUTON MELENCHON
+#ON TROUVE JUSTE COMMENT AUTOMATIS2E SON PUTAING DE CHANGEMENT DE TEXTURE 
+#APRES ON AURA JUSTE A REFAIRE LA MEME PARTIE DU CODE EN CHANGANT COMBIEN SA RAPPORTE LES CLIQUE ET LIMAGE 
+#QUOI
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[node name="Node2D" type="Node2D" unique_id=1350890705]
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=1804214430]
+offset_left = 153.0
+offset_top = 145.0
+offset_right = 982.0
+offset_bottom = 595.0
+texture_normal = ExtResource("1_0e48y")
+script = SubResource("GDScript_wtcfe")
+
+[node name="Label" type="Label" parent="." unique_id=1470861094]
+offset_left = 897.0
+offset_top = 18.0
+offset_right = 1137.0
+offset_bottom = 110.0
+theme_override_font_sizes/font_size = 100
+text = "0"
+script = ExtResource("3_0hol4")
+
+[connection signal="pressed" from="TextureButton" to="Label" method="_on_texture_button_pressed"]
