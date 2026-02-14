@@ -8,3 +8,4 @@ objectif sur le court terme :
 - Pouvoir avoir des cartes plus rares que d'autres ❌
 - Développer le système d'argent (et rendre les clics payants)❌
 - améliorer les graphismes❌
+- Crée un système de sauvegarde❌
