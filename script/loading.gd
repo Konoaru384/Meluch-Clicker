@@ -14,11 +14,13 @@ var fake_progress := 0.0
 var scene_loaded := false
 var scene_resource: PackedScene = null
 var switching := false
+var sound = preload("res://sons/larepublique.mp3")
 
 func _ready():
 	progress_bar.value = 0
 	fade.modulate.a = 0
 	ResourceLoader.load_threaded_request(next_scene_path)
+	$AudioStreamPlayer2D.stream = sound
 
 func _process(delta):
 	if switching:
@@ -44,6 +46,8 @@ func _process(delta):
 		animate_transition()
 
 func animate_transition():
+	
+	$AudioStreamPlayer2D.play()
 	var tween = create_tween()
 	tween.tween_property(fade, "modulate:a", 1.0, 0.8)
 	tween.tween_callback(Callable(self, "_finish_loading"))
