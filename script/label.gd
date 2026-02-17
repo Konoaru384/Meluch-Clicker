@@ -10,13 +10,12 @@ func _on_texture_button_pressed() -> void:
 	text = str(Melenchonadd)
 	print("Melenchon cliquée", Melenchonadd)
 	
-	var chooseMelenchon = ceil(randf_range(0, 2))
-	print (chooseMelenchon)
-	if chooseMelenchon == 1: 
-		buttontexture.texture_normal = load("res://texture/melenchon/Melenchonid1.png")
-	elif chooseMelenchon == 2:
-		buttontexture.texture_normal = load("res://texture/melenchon/Melenchonid2.png")
-	else:
-		print("tes con !? ho lis le code idiot")
+	var Melenchonchoose = ["Melenchonid1.png", "Melenchonid2.png"]
+	var probabilities = [0.5, 4];
+	
+	var Melenchonchoosefix = Melenchonchoose.pick_random()
+	var random = RandomNumberGenerator.new()
+	print(Melenchonchoose[random.rand_weighted(probabilities)])
+	buttontexture.texture_normal = load("res://texture/melenchon/" +Melenchonchoosefix)
 	
 	
